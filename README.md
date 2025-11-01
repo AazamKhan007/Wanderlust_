@@ -83,7 +83,7 @@ Major Project/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/wanderlust.git
+   git clone https://github.com/AazamKhan007/Wanderlust_.git
    cd wanderlust
    ```
 
@@ -193,32 +193,13 @@ Major Project/
 - [ ] Admin dashboard
 - [ ] REST API for mobile app integration
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Developer
 
-**Your Name**
+**Aazam Shahd Khan**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
-
-## 🙏 Acknowledgments
-
-- [Unsplash](https://unsplash.com) for providing beautiful images
-- [Bootstrap](https://getbootstrap.com) for the responsive framework
-- [Font Awesome](https://fontawesome.com) for the icon library
-- [MongoDB](https://mongodb.com) for the database solution
+- GitHub: [@AazamKhan007](https://github.com/AazamKhan007)
+- LinkedIn: [in/aazamkhan0007](https://www.linkedin.com/in/aazamkhan0007/)
+- Email: aazam2004aazam@gmail.com
 
 ---
 
