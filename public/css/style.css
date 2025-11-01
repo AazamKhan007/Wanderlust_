@@ -1,0 +1,199 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar-brand {
+  font-family: "Brush Script MT", "Apple Chancery", cursive;
+  color: #fe424d !important;
+  font-size: 1.8rem;
+}
+
+.navbar-brand span :hover {
+  transform: rotate(360deg);
+  transition: 3s, linear, 1s;
+}
+
+.navbar-nav {
+  /* width: 50%; */
+  margin: 0 auto;
+  border: 1.2px solid rgb(187, 187, 187);
+  box-shadow: 2px 2px 5px rgb(187, 187, 187);
+  border-radius: 25px 25px;
+  padding: 0px 10px;
+  transition: 2.5s, linear, 0.3s;
+  background-color: white;
+}
+
+.navbar-nav:hover {
+  transform: scale(1.07);
+  box-shadow: 2.5px 2.5px 6px rgb(187, 187, 187);
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+  z-index: 10;
+}
+
+.nav-link {
+  color: #222222 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: rgb(132, 132, 132) !important;
+}
+
+.nav-link-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5px;
+  cursor: pointer;
+  color: rgb(132, 132, 132);
+}
+
+.f-info {
+  text-align: center;
+  height: 8rem;
+  background-color: #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #222222;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-info-socials i {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  color: #222222 !important;
+}
+
+.f-info-links a {
+  text-decoration: none;
+  color: #222222;
+}
+
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+
+.f-info-links .dot {
+  padding: 0px 4px;
+  font-weight: 100;
+}
+
+/* Card */
+.card {
+  border: none !important;
+  margin-bottom: 2rem;
+  transition: 2s, linear, 0.1s;
+  border-radius: 1rem !important;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+#heart1,
+#heart2,
+#heart3 {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 25px;
+  transition: 1.8s, linear, 0.2s;
+}
+
+#heart1 {
+  z-index: 2;
+  color: white;
+}
+
+#heart2 {
+  z-index: 1;
+  color: grey;
+  opacity: 0.6;
+}
+
+#heart3 {
+  z-index: 3;
+  opacity: 0;
+}
+
+#heart3:hover {
+  color: #fe424d !important;
+  opacity: 1;
+  transform: scale(1.3);
+  z-index: 3;
+}
+
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.card-body {
+  padding: 0 !important;
+}
+
+.card-text {
+  font-weight: 400 !important;
+  margin: 2px;
+}
+
+.listing-link {
+  text-decoration: none;
+}
+
+/* #location {
+  align-content: space-between;
+} */
+
+.card-text-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 0.3rem;
+}
+
+/* New Listing description placeholder animation(new.ejs) */
+#animated-input {
+  /* width: 300px; */
+  /* padding: 10px; */
+  /* font-size: 16px; */
+  /* font-family: monospace; A classic font for a typing effect */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Optional: add a blinking cursor effect to the placeholder */
+#animated-input:placeholder-shown::placeholder {
+  animation: typing-cursor 0.8s infinite;
+}
+
+@keyframes typing-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}

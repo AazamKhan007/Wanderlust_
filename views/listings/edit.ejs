@@ -1,0 +1,102 @@
+<% layout("/layouts/boilerplate") %>
+<div class="row">
+  <div class="col-8 offset-2">
+    <br /><br />
+    <h3>Edit Your Listing</h3>
+    <form
+      method="POST"
+      action="/listings/<%= listing._id %>?_method=PUT"
+      class="needs-validation"
+      novalidate
+    >
+      <div class="mb-3">
+        <label for="title" class="form-table">Title</label>
+        <input
+          name="listing[title]"
+          value="<%= listing.title %>"
+          type="text"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+        <!-- show when the filed is empty  -->
+        <div class="invalid-feedback">Please Write a valid title.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Description" class="form-table">Description</label>
+        <textarea
+          name="listing[description]"
+          cols="21"
+          rows="5"
+          class="form-control"
+          required
+        >
+<%=listing.description%>
+</textarea
+        >
+        <!-- show when the filed is empty  -->
+        <div class="invalid-feedback">Please enter a short description.</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Images" class="form-table">Images</label>
+        <input
+          name="listing[image.url]"
+          value=" <%= listing.image.url %> "
+          type="text"
+          class="form-control"
+          required
+        />
+        <!-- show when the filed is empty  -->
+        <div class="invalid-feedback">Please enter a valid link for image.</div>
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="Price" class="form-table">Price</label>
+          <input
+            name="listing[price]"
+            value="<%= listing.price %>"
+            type="number"
+            class="form-control"
+            required
+          />
+          <!-- show when the filed is empty  -->
+          <div class="invalid-feedback">Price should be valid.</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="Country" class="form-table">Country</label>
+          <input
+            name="listing[country]"
+            value="<%= listing.country%>"
+            type="text"
+            class="form-control"
+            required
+          />
+          <!-- show when the filed is empty  -->
+          <div class="invalid-feedback">Country name should be valid.</div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="Location" class="form-table">Location</label>
+        <input
+          name="listing[location]"
+          value="<%= listing.location %>"
+          class="form-control"
+          type="text"
+          required
+        />
+        <!-- show when the filed is empty  -->
+        <div class="invalid-feedback">Location should be valid.</div>
+      </div>
+      <br />
+      <button class="btn btn-dark offset-5">Edit</button>
+    </form>
+    <br />
+    <br />
+  </div>
+</div>
+<!-- <script src="/js/script.js"></script> -->

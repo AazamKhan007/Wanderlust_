@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row">
+  <div class="col-10 col-md-8 offset-1 offset-md-2 py-5">
+    <h3 class="mb-4">Listing Details</h3>
+
+    <!-- Card with image + details -->
+    <div class="card-show mb-4">
+      <% if (listing.image && listing.image.url) { %>
+      <img
+        src="<%= listing.image.url %>"
+        class="card-img-top img-fluid"
+        alt="<%= listing.title %>"
+      />
+      <% } else { %>
+      <div
+        class="card-img-top d-flex align-items-center justify-content-center"
+        style="min-height: 220px"
+      >
+        <small class="text-muted"
+          >No image provided — URL: <%= listing.image ? listing.image.url :
+          'N/A' %></small
+        >
+      </div>
+      <% } %>
+
+      <div class="card-body">
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Title</label>
+          <div class="form-control-plaintext"><%= listing.title %></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Price</label>
+          <div class="form-control-plaintext">
+            &#8377;<%= listing.price.toLocaleString("en-IN") %> / night
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Location</label>
+          <div class="form-control-plaintext"><%= listing.location %></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Country</label>
+          <div class="form-control-plaintext"><%= listing.country %></div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Description</label>
+          <p class="mb-0 text-muted"><%= listing.description %></p>
+        </div>
+
+        <hr />
+
+        <!-- Actions -->
+        <!-- Buttons -->
+        <div class="d-flex justify-content-center gap-3 mt-3">
+          <a
+            href="/listings/<%= listing._id %>/edit"
+            class="btn btn-dark px-4 py-2"
+          >
+            Edit
+          </a>
+
+          <form
+            method="POST"
+            action="/listings/<%= listing._id %>?_method=DELETE"
+            onsubmit="return confirm('Are you sure you want to delete this listing?');"
+          >
+            <button type="submit" class="btn btn-outline-danger px-4 py-2">
+              Delete
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meta / small note -->
+    <div class="text-center text-muted">
+      <small
+        >Shown exactly as entered by host · Make sure to contact them for
+        availability</small
+      >
+    </div>
+  </div>
+</div>
